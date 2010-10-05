@@ -4,6 +4,8 @@
   <tr>
     <th>Title</th>
     <th>Body</th>
+    <th>作成日時</th>
+    <th>更新日時</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,8 @@
   <tr>
     <td><%= post.Title %></td>
     <td><%= post.Body %></td>
+    <td><%= post.created_at.localtime.strftime("%Y年%m月%d日 %H:%M") %></td>
+    <td><%= post.updated_at.localtime.strftime("%Y年%m月%d日 %H:%M") %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
